@@ -150,8 +150,10 @@ body {
 
 /* Carousel base class */
 .carousel {
-  height: 500px;
+  height: 480px;
   margin-bottom: 60px;
+  margin-top:98px;
+  /*background-image:url('http://i.imgur.com/BBPF2ZN.png');*/
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -160,13 +162,39 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 500px;
-  background-color: #777;
+  height: 480px;
+  background-color: white;
 }
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
+  left: 40%;
+  /*min-width: 100%;*/
+  width:320px;
+  height: 480px;
+
+}
+
+
+
+/**********/
+.iphone {
+
+    background-image:url('images/concept-iphone.png');
+    background-position:center top;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    position: absolute;
+z-index: 22;
+}
+.concept .concept-iphone .screen {
+position: absolute;
+z-index: 2;
+top: 13%;
+right: 20.75%;
+left: 20%;
+bottom: 22%;
+background: #1a1a1a;
+border-radius: 1px;
+box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
 }
