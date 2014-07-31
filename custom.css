@@ -11,9 +11,9 @@ body {
     background-repeat: no-repeat;
   background-attachment: fixed;*/
 }
-body {
+/*body {
   text-align: center;
-}
+}*/
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -178,6 +178,13 @@ body {
 
 
 /**********/
+body{
+    background-image:url('images/flow_blur.png');
+    max-width:100%; max-height:100%;
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
 .iphone {
 
     background-image:url('images/concept-iphone.png');
