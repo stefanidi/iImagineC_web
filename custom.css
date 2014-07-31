@@ -175,6 +175,31 @@ body {
 
 }
 
+/* Font Awesome */
+
+.jumbotron-icon .fa-2 {
+  font-size: 2em;
+}
+.jumbotron-icon .fa-3 {
+  font-size: 4em;
+}
+.jumbotron-icon .fa-4 {
+  font-size: 7em;
+}
+.jumbotron-icon .fa-5 {
+  font-size: 12em;
+}
+.jumbotron-icon .fa-6 {
+  font-size: 20em;
+}
+.jumbotron-icon .fa-1,
+.jumbotron-icon .fa-2,
+.jumbotron-icon .fa-3,
+.jumbotron-icon .fa-4,
+.jumbotron-icon .fa-5,
+.jumbotron-icon .fa-6 {
+  margin-right: 0.07142857em;
+}
 
 
 /**********/
