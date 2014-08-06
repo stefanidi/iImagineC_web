@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Flow is a simple, yet elegant, app that instantly displays your daily activities for the past 7 days.">
+    <meta name="author" content="iImagineC Roman Stefanidi">
     <link rel="icon" href="images/app_icon_flow_58.png">
 
-    <title>Flow - by iImagineC</title>
+    <title>Flow - Activity Tracker</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -29,43 +29,46 @@
 
 <body>
     <!-- Header Nav -->
-    <div class="navbar navbar-fixed-top" style="background-color: white; padding-bottom:20px;">
-        <div style="background-color: white; border-bottom-color: gray; border-bottom-style: solid; border-bottom-width: thin;">
-            <div class="navbar-inner">
-                <div class="container">
-                    <div class="clearfix">
-                        <div class="inner">
-                            <h3 class="masthead-brand">Flow</h3>
-                            <ul class="nav masthead-nav">
-                                <li class="active"><a href="#">Home</a></li>
-                                <li><a href="#features">Features</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h3 class="masthead-brand">Flow</h3>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav masthead-nav ">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div>
         <div class="container">
 
             <div class="row featurette" style="margin-top:98px; background-color:transparent;">
                 <div class="col-md-6" style="text-align:center">
-                    <h2 class="" style="float: right;margin-top: 200px; text-align:right">
+                    <h2 class="tag-heading">
                         <span class="text-muted"><strong>Flow</strong> is a simple, yet elegant, app that instantly displays your daily activities for the past 7 days.</span>
                     </h2>
-                    <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=904226450&mt=8"><img src="images/appstore.svg" style="width: 200px; margin-top: 270px;"></a>
+                    <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=904226450&mt=8"><img src="images/appstore.svg" class="tag-appstore"></a>
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-4">
+                <div class="col-md-1 col-xs-1"></div>
+                <div class="col-md-4 col-xs-10">
                     <img src="images/flowappiphone.png" style="width:100%">
                 </div>
             </div>
 
-            <hr class="featurette-divider" style="margin: 80px 0;" id="features">
+            <hr class="featurette-divider" id="features">
 
             <div class="row featurette">
                 <div class="col-md-5" style="text-align:center;">
@@ -80,10 +83,10 @@
                 </div>
             </div>
 
-            <hr class="featurette-divider" style="margin: 80px 0;">
+            <hr class="featurette-divider">
 
             <div class="row featurette">
-                <div class="col-md-7" style="text-align:right;">
+                <div class="col-md-7 detail-text-right">
                     <h3 class="featurette-heading"><span class="text-muted">Automatic Sleep Detect</span></h3>
                     <p class="lead">
                         Flow will automatically detect your sleep duration and times, with no need for user input.
@@ -95,7 +98,7 @@
                 </div>
             </div>
 
-            <hr class="featurette-divider" style="margin: 80px 0;">
+            <hr class="featurette-divider" >
 
             <div class="row featurette">
                 <div class="col-md-5" style="text-align:center;">
@@ -109,10 +112,10 @@
                 </div>
             </div>
 
-            <hr class="featurette-divider" style="margin: 80px 0;">
+            <hr class="featurette-divider" >
 
             <div class="row featurette">
-                <div class="col-md-7" style="text-align:right;">
+                <div class="col-md-7 detail-text-right">
                     <h3 class="featurette-heading"><span class="text-muted">Activity Level</span></h3>
                     <p class="lead">
                         Flow will estimate your general activity time through the day.
@@ -123,7 +126,7 @@
                 </div>
             </div>
 
-            <hr class="featurette-divider" style="margin: 80px 0;">
+            <hr class="featurette-divider" >
 
             <div class="row featurette">
                 <div class="col-md-5" style="text-align:center;">
@@ -137,10 +140,10 @@
                 </div>
             </div>
 
-            <hr class="featurette-divider" style="margin: 80px 0;">
+            <hr class="featurette-divider" >
 
             <div class="row featurette">
-                <div class="col-md-7" style="text-align:right;">
+                <div class="col-md-7 detail-text-right">
                     <h3 class="featurette-heading"><span class="text-muted">Works Instantly</span></h3>
                     <p class="lead">
                         Flow uses latest hardware in the iPhone 5s and will instantly display your activities for the past seven days from day one.
@@ -151,7 +154,7 @@
                 </div>
             </div>
 
-            <hr class="featurette-divider" style="margin: 80px 0;">
+            <hr class="featurette-divider">
 
             <div class="row featurette" style="margin-bottom:80px;">
                 <div class="col-md-12" style="text-align:center;">

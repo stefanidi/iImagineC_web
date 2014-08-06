@@ -6,31 +6,14 @@
 html,
 body {
   height: 100%;
-  /*background-image: url('http://i.imgur.com/BBPF2ZN.png');
-  background-size:   cover;                     
-    background-repeat: no-repeat;
-  background-attachment: fixed;*/
 }
-/*body {
-  text-align: center;
-}*/
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
-}
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
+body{
+    background-image:url('images/flow_blur.png');
+    max-width:100%; max-height:100%;
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
 
 /* Padding for spacing */
@@ -42,6 +25,37 @@ body {
 /*
  * Header
  */
+
+/* Navigation */
+.navbar{
+    background-color: white; 
+    padding-bottom:20px;
+}
+
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+.navbar-inner{
+    background-color: white; 
+    border-bottom-color: gray; 
+    border-bottom-style: solid; 
+    border-bottom-width: thin;
+}
+
+    .navbar .navbar-toggle {
+        border-color: #ddd;
+    }
+
+        .navbar .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+            background-color: #ddd;
+        }
+
+        .navbar .navbar-toggle .icon-bar {
+            background-color: #888;
+        }
+
+/* Menu links */
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -59,15 +73,11 @@ body {
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  /*color: #fff; /* IE8 proofing */
-  /*color: rgba(255,255,255,.75);*/
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
-  /*border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);*/
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
@@ -78,6 +88,10 @@ body {
 }
 
 @media (min-width: 768px) {
+    
+  .navbar-inner .container{
+    padding:30px 30px 0px 30px;
+  }
   .masthead-brand {
     float: left;
   }
@@ -85,28 +99,13 @@ body {
     float: right;
   }
 }
-
-
-/*
- * Cover
- */
-
-.cover {
-  padding: 0 20px;
+@media (max-width: 767px) {
+  .masthead-brand {
+    margin-left:15px;
+  }
+  .navbar{
+    padding-bottom:0px;
 }
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-
-/*
- * Footer
- */
-
-.mastfoot {
-  /*color: #999; /* IE8 proofing */
-  /*color: rgba(255,255,255,.5);*/
 }
 
 
@@ -120,17 +119,12 @@ body {
     position: fixed;
     top: 0;
   }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
   /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
   }
   /* Handle the widths */
   .masthead,
-  .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
@@ -145,37 +139,9 @@ body {
 }
 
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  height: 480px;
-  margin-bottom: 60px;
-  margin-top:98px;
-  /*background-image:url('http://i.imgur.com/BBPF2ZN.png');*/
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 480px;
-  background-color: white;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 40%;
-  /*min-width: 100%;*/
-  width:320px;
-  height: 480px;
-
-}
-
-/* Font Awesome */
+/*
+ * Font Awesome 
+ */
 
 .jumbotron-icon .fa-2 {
   font-size: 2em;
@@ -202,14 +168,10 @@ body {
 }
 
 
-/**********/
-body{
-    background-image:url('images/flow_blur.png');
-    max-width:100%; max-height:100%;
-    background-position: center center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-}
+/*
+ * Specific 
+ */
+
 .iphone {
 
     background-image:url('images/concept-iphone.png');
@@ -217,16 +179,47 @@ body{
     background-size:100% 100%;
     background-repeat:no-repeat;
     position: absolute;
-z-index: 22;
+    z-index: 22;
 }
-.concept .concept-iphone .screen {
-position: absolute;
-z-index: 2;
-top: 13%;
-right: 20.75%;
-left: 20%;
-bottom: 22%;
-background: #1a1a1a;
-border-radius: 1px;
-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+
+
+/*
+ * Feature
+ */
+.tag-heading{
+    float: right;
+    margin-top: 200px; 
+    text-align:right
+}
+.tag-appstore{
+    width: 200px; 
+    margin-top: 270px;
+}
+.featurette-divider{
+    margin: 80px 0;
+}
+.detail-text-right{
+    text-align:right;
+}
+@media (max-width: 767px) {
+    .tag-heading{
+        margin-top: 0px;
+        text-align: center;
+    }
+    
+    .tag-appstore{ 
+        margin-top: 20px;
+    }
+
+    .featurette{
+        text-align:center;
+    }
+
+    .featurette-divider{
+        margin: 20px 0;
+    }
+
+    .detail-text-right{
+        text-align:center;
+    }
 }
