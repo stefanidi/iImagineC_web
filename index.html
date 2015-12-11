@@ -1,211 +1,216 @@
 ﻿
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Flow is a simple, yet elegant, app that instantly displays your daily activities for the past 7 days.">
-    <meta name="author" content="iImagineC Roman Stefanidi">
-    <link rel="icon" href="images/app_icon_flow_58.png">
+    <title>iImagineC</title>
+    <meta name="description" content="iImagineC" />
+    <meta name="keywords" content="iImagineC, internet of things, iot, bitcoin, blockchian, block chain, Architect, Solutions Architect, Developer, Team Lead, WPF, Silverlight, MVVM, .NET, Azure, REST, JSON, RavenDB, HTML5, JavaScript, AngularJS, Ninject, iOS, Xamarin"
+    />
 
-    <title>Flow - Activity Tracker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <!-- Font Awesome -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="custom.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-color: white;
+            letter-spacing: 1px;
+        }
+        
+        #primaryNavigation {
+            margin-top: 0em;
+            padding-top: 2em;
+            text-align: center;
+        }
+        
+        #primaryNavigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        
+        #primaryNavigation li {
+            display: inline;
+            margin: 0;
+            padding: 0;
+            /*width: 100%;
+            float: left;*/
+        }
+        
+        #primaryNavigation a:link,
+        #primaryNavigation a:visited {
+            color: black;
+            display: block;
+            font-size: 12px;
+            letter-spacing: 0.4em;
+            padding: .4em 0;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        #primaryNavigation a:hover,
+        #primaryNavigation a:active {
+            color: gray;
+            background-color: transparent;
+        }
+        
+        #primaryNavigation a:focus {
+            background-color: transparent;
+        }
+        
+        #primaryNavigation a:link.current,
+        #primaryNavigation a:visited.current {
+            font-weight: bold;
+        }
+        
+        .active {
+            font-weight: bold;
+        }
+        
+        .container {
+            margin-top: 10px;
+        }
+        
+        /* Customize container */
+        @media (min-width: 768px) {
+        .container {
+            max-width: 830px;
+        }
+        }
+        
+        #content {
+            height: 70%;
+            overflow-y: scroll;
+            font-weight: 100;
+        }
+        
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        h2 {
+            font-weight: 100;
+        }
+        
+        h3 {
+            font-weight: 100;
+            letter-spacing: 3px;
+        }
+        
+        hr {
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        
+        .text-spacing-none {
+            letter-spacing: 0px;
+        }
+        
+        .text-spacing-large {
+            letter-spacing: 6px;
+        }
+        
+        .text-spacing-med {
+            letter-spacing: 3px;
+        }
+        
+        .top-pad {
+            margin-top: 10px;
+        }
+        
+        .top-pad-lg {
+            margin-top: 30px;
+        }
+        
+        .top-pad-xlg {
+            margin-top: 90px;
+        }
+        
+        a {
+            color: #333
+        }
+        
+        .noclick a:focus,
+        a:hover {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .date-column {
+            min-width: 154px;
+        }
+        
+        .box {
+            border: black;
+            border-style: solid;
+            border-width: thin;
+            padding: 20px;
+        }
+        
+        @media screen and (max-width: 821px) {
+            .date-column b {
+                font-weight: 400;
+            }
+        }
+    </style>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-53592467-1', 'auto');
-        ga('send', 'pageview');
-
+    <script type="text/javascript">
+        $(window).load(function(){
+            $('#content').scrollspy({offset: 20});
+            
+            $('.nav li a').click(function(event) {
+                event.preventDefault();
+                $($(this).attr('href'))[0].scrollIntoView();
+                scrollBy(0, -0);
+            });
+        });
     </script>
+
 </head>
 
 <body>
-    <!-- Header Nav -->
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <h3 class="masthead-brand">Flow</h3>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav masthead-nav ">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
+    <div class="container">
+        <div class="row" style="margin-top: 30px; margin-bottom: 30px;">
+            <div class="col-xs-12">
+                <h2 class="text-spacing-large">iImagineC</h2>
+                <br>
+                <!--<span class="text-spacing-med"><a href="#projects">projects</a> &nbsp | &nbsp
+                <a href="#expertise">expertise</a> &nbsp | &nbsp
+                <a href="#contact">contact</a>
+                </span>-->
+                <br>
+            </div>
+        </div>
+        <div class="row ">
+
+            <!-- Flow -->
+            <div id="flow" class="col-sm-12 col-md-6 top-pad-xlg">
+                <a href="./flow" class="box">
+                Flow - iOS Fitness tracking app
+                </a>
+            </div>
+            
+            <!-- BitLight -->
+            <div id="bitlight" class="col-sm-12 col-md-6 top-pad-xlg">
+                <a href="./bitlight" class="box">
+                BitLight - Power on Demand, Paid for by Bitcoin
+                </a>
             </div>
         </div>
     </div>
+    <!-- /container -->
 
-    <div>
-        <div class="container">
-
-            <div class="row featurette" style="margin-top:98px; background-color:transparent;">
-                <div class="col-md-6" style="text-align:center">
-                    <h2 class="tag-heading">
-                        <span class="text-muted"><strong>Flow</strong> is a simple, yet elegant, app that instantly displays your daily activities for the past 7 days.</span>
-                    </h2>
-                    <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=904226450&mt=8"><img src="images/appstore.svg" class="tag-appstore"></a>
-                </div>
-                <div class="col-md-1 col-xs-1"></div>
-                <div class="col-md-4 col-xs-10">
-                    <img src="images/flowappiphone.png" style="width:100%">
-                </div>
-            </div>
-
-            <hr class="featurette-divider" id="features">
-
-            <div class="row featurette">
-                <div class="col-md-5" style="text-align:center;">
-                    <span class="glyphicon glyphicon-flash" style="font-size: 7em; margin-top:30px;"></span>
-                </div>
-                <div class="col-md-7">
-                    <h3 class="featurette-heading"><span class="text-muted">No Battery Drain</span></h3>
-                    <p class="lead">
-                        Flow does not drain battery and does not need to run in the background to actively track your activities.
-                        In fact, Flow will show your activity summary for the past 7 days as soon as you start using it.
-                    </p>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7 detail-text-right">
-                    <h3 class="featurette-heading"><span class="text-muted">Automatic Sleep Detect</span></h3>
-                    <p class="lead">
-                        Flow will automatically detect your sleep duration and times, with no need for user input.
-                        Simply place your phone on the bedside table when you go to sleep and pick it up when you wake in the morning.
-                    </p>
-                </div>
-                <div class="col-md-5" style="text-align:center;">
-                    <img src="images/sleep.png" style="width: 200px; margin-top: -20px;">
-                </div>
-            </div>
-
-            <hr class="featurette-divider" >
-
-            <div class="row featurette">
-                <div class="col-md-5" style="text-align:center;">
-                    <img src="images/run.png" style="width: 200px; margin-top: -20px;">
-                </div>
-                <div class="col-md-7">
-                    <h3 class="featurette-heading"><span class="text-muted">Walk, Run, Steps</span></h3>
-                    <p class="lead">
-                        Flow will track your Walking and Running time. Display the number of steps you take throughout the day.
-                    </p>
-                </div>
-            </div>
-
-            <hr class="featurette-divider" >
-
-            <div class="row featurette">
-                <div class="col-md-7 detail-text-right">
-                    <h3 class="featurette-heading"><span class="text-muted">Activity Level</span></h3>
-                    <p class="lead">
-                        Flow will estimate your general activity time through the day.
-                    </p>
-                </div>
-                <div class="col-md-5" style="text-align:center;">
-                    <img src="images/active.png" style="width: 200px; margin-top: -20px;">
-                </div>
-            </div>
-
-            <hr class="featurette-divider" >
-
-            <div class="row featurette">
-                <div class="col-md-5" style="text-align:center;">
-                    <img src="images/cycle.png" style="width: 200px; margin-top: -20px;">
-                </div>
-                <div class="col-md-7">
-                    <h3 class="featurette-heading"><span class="text-muted">Drive or Cycle</span></h3>
-                    <p class="lead">
-                        Flow detects how long you drive or cycle.
-                    </p>
-                </div>
-            </div>
-
-            <hr class="featurette-divider" >
-
-            <div class="row featurette">
-                <div class="col-md-7 detail-text-right">
-                    <h3 class="featurette-heading"><span class="text-muted">Works Instantly</span></h3>
-                    <p class="lead">
-                        Flow uses latest hardware in the iPhone 5s and will instantly display your activities for the past seven days from day one.
-                    </p>
-                </div>
-                <div class="col-md-5" style="text-align:center;">
-                    <span class="glyphicon glyphicon-time" style="font-size: 7em; margin-top:30px;"></span>
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette" style="margin-bottom:80px;">
-                <div class="col-md-12" style="text-align:center;">
-                    <a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=904226450&mt=8"><img src="images/appstore.svg" style="width:200px; "></a>
-                </div>
-            </div>
-
-        </div> <!-- /container -->
-
-        <div style="background-color: rgba(240, 240, 240, 0.3); margin-bottom: -130px; padding-bottom: 100px;">
-
-            <div class="container marketing" id="contact">
-                <div class="row jumbotron-icon" style="text-align: center;">
-                    <h1 style="text-align: center;">Contact Us</h1>
-                    <h3 style="text-align: center;"><span class="text-muted">Support and Feature Requests</span></h3>
-                    <a href="mailto:support@iimaginec.com" style="color: #222222; margin:10px 5px;"><i class="fa fa-envelope-square fa-3"></i></a>
-                    <a href="https://www.facebook.com/flowiphoneappiimaginec" style="color: #222222; margin: 10px 5px;"><i class="fa fa-facebook-square fa-3"></i></a>
-                    <a href="https://www.linkedin.com/profile/view?id=50263656&trk=nav_responsive_tab_profile" style="color: #222222; margin: 10px 5px;"><i class="fa fa-linkedin-square fa-3"></i></a>
-                    <a href="http://www.iimaginec.com" style="color: #222222; margin: 10px 5px;"><i class="fa fa-twitter-square fa-3"></i></a>
-                </div>
-
-                <hr class="featurette-divider" style="border-top-color: white;margin-bottom: 0px;">
-
-                <div class="row featurette" style="text-align: center;">
-                    <!--<a style="text-align: center;" href="www.iimaginec.com">www.iimaginec.com</a>-->
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>

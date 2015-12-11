@@ -1,0 +1,225 @@
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+}
+
+body{
+    background-image:url('images/flow_blur.png');
+    max-width:100%; max-height:100%;
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+
+/* Navigation */
+.navbar{
+    background-color: white; 
+    padding-bottom:20px;
+}
+
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+.navbar-inner{
+    background-color: white; 
+    border-bottom-color: gray; 
+    border-bottom-style: solid; 
+    border-bottom-width: thin;
+}
+
+    .navbar .navbar-toggle {
+        border-color: #ddd;
+    }
+
+        .navbar .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+            background-color: #ddd;
+        }
+
+        .navbar .navbar-toggle .icon-bar {
+            background-color: #888;
+        }
+
+/* Menu links */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(90, 90, 90);
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+    border-top-color: #808080;
+    border-top-width: thin;
+    border-top-style: solid;
+}
+
+@media (min-width: 768px) {
+    
+  .navbar-inner .container{
+    padding:30px 30px 0px 30px;
+  }
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+@media (max-width: 767px) {
+  .masthead-brand {
+    margin-left:15px;
+  }
+  .navbar{
+    padding-bottom:0px;
+}
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 900px;
+  }
+}
+
+
+/*
+ * Font Awesome 
+ */
+
+.jumbotron-icon .fa-2 {
+  font-size: 2em;
+}
+.jumbotron-icon .fa-3 {
+  font-size: 4em;
+}
+.jumbotron-icon .fa-4 {
+  font-size: 7em;
+}
+.jumbotron-icon .fa-5 {
+  font-size: 12em;
+}
+.jumbotron-icon .fa-6 {
+  font-size: 20em;
+}
+.jumbotron-icon .fa-1,
+.jumbotron-icon .fa-2,
+.jumbotron-icon .fa-3,
+.jumbotron-icon .fa-4,
+.jumbotron-icon .fa-5,
+.jumbotron-icon .fa-6 {
+  margin-right: 0.07142857em;
+}
+
+
+/*
+ * Specific 
+ */
+
+.iphone {
+
+    background-image:url('images/concept-iphone.png');
+    background-position:center top;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    position: absolute;
+    z-index: 22;
+}
+
+
+/*
+ * Feature
+ */
+.tag-heading{
+    float: right;
+    margin-top: 200px; 
+    text-align:right
+}
+.tag-appstore{
+    width: 200px; 
+    margin-top: 270px;
+}
+.featurette-divider{
+    margin: 80px 0;
+}
+.detail-text-right{
+    text-align:right;
+}
+@media (max-width: 767px) {
+    .tag-heading{
+        margin-top: 0px;
+        text-align: center;
+    }
+    
+    .tag-appstore{ 
+        margin-top: 20px;
+    }
+
+    .featurette{
+        text-align:center;
+    }
+
+    .featurette-divider{
+        margin: 20px 0;
+    }
+
+    .detail-text-right{
+        text-align:center;
+    }
+}
